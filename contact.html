@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 上海曼桠姆智能科技有限公司</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-page {
+      min-height: 100vh;
+    }
+    .contact-hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .contact-content {
+      padding: 4rem 2rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .contact-info h2,
+    .contact-form-container h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #667eea;
+      display: inline-block;
+    }
+    .info-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .info-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .info-icon {
+      font-size: 2rem;
+      min-width: 50px;
+      text-align: center;
+    }
+    .info-content h3 {
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .info-content p {
+      color: #666;
+      margin: 0;
+    }
+    .contact-form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group textarea {
+      padding: 0.75rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .submit-btn {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s, transform 0.2s;
+    }
+    .submit-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    @media (max-width: 968px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏将通过 navigation.js 动态加载 -->
+
+  <div class="contact-page">
+    <div class="contact-hero">
+      <div class="container">
+        <h1>联系我们</h1>
+        <p style="font-size: 1.3rem; opacity: 0.9;">我们期待与您的合作</p>
+      </div>
+    </div>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>联系方式</h2>
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h3>公司地址</h3>
+                <p>上海市浦东新区张江高科技园区</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h3>联系电话</h3>
+                <p>021-12345678</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📧</div>
+              <div class="info-content">
+                <h3>电子邮箱</h3>
+                <p>info@manyamu.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🕐</div>
+              <div class="info-content">
+                <h3>工作时间</h3>
+                <p>周一至周五: 9:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <h2>在线咨询</h2>
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">姓名 *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">邮箱 *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">电话</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-group">
+                <label for="subject">主题 *</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">留言内容 *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">提交</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 上海曼桠姆智能科技有限公司. 保留所有权利.</p>
+      <p>地址：上海市浦东新区张江高科技园区 | 电话：021-12345678</p>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert('感谢您的留言！我们会尽快与您联系。');
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
+

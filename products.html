@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品服务 - 上海曼桠姆智能科技有限公司</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .products-page {
+      min-height: 100vh;
+    }
+    .products-hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .products-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .products-content {
+      padding: 4rem 2rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    .product-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+    }
+    .product-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .product-body {
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    .product-description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .product-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .product-features li {
+      padding: 0.5rem 0;
+      color: #333;
+      display: flex;
+      align-items: center;
+    }
+    .product-features li::before {
+      content: '✓';
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .product-footer {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid #eee;
+    }
+    .product-btn {
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: opacity 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    .product-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏将通过 navigation.js 动态加载 -->
+
+  <div class="products-page">
+    <div class="products-hero">
+      <div class="container">
+        <h1>产品与服务</h1>
+        <p style="font-size: 1.3rem; opacity: 0.9;">为企业提供全方位的智能科技解决方案</p>
+      </div>
+    </div>
+
+    <section class="products-content">
+      <div class="container">
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-header">
+              <h2>智能数据分析平台</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">提供全面的数据分析和可视化解决方案，帮助企业快速洞察业务数据，做出明智决策。</p>
+              <ul class="product-features">
+                <li>实时数据处理</li>
+                <li>多维度分析</li>
+                <li>可视化报表</li>
+                <li>智能预测</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="device-detail.html?id=2" class="product-btn">了解更多</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-header">
+              <h2>AI智能客服系统</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">基于自然语言处理技术的智能客服系统，提供7x24小时自动服务，提升客户满意度。</p>
+              <ul class="product-features">
+                <li>自然语言理解</li>
+                <li>智能问答</li>
+                <li>多轮对话</li>
+                <li>情感分析</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="contact.html" class="product-btn">联系我们</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-header">
+              <h2>云计算解决方案</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">提供安全、稳定、高效的云计算服务，支持弹性扩展，满足企业不同规模的需求。</p>
+              <ul class="product-features">
+                <li>弹性扩展</li>
+                <li>高可用性</li>
+                <li>数据安全</li>
+                <li>成本优化</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="contact.html" class="product-btn">联系我们</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-header">
+              <h2>智能监控系统</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">全方位的智能监控解决方案，实时监测系统状态，及时预警和响应，保障业务稳定运行。</p>
+              <ul class="product-features">
+                <li>实时监控</li>
+                <li>智能告警</li>
+                <li>故障诊断</li>
+                <li>性能优化</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="device-detail.html?id=1" class="product-btn">了解更多</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-header">
+              <h2>企业数字化转型咨询</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">为企业提供专业的数字化转型咨询服务，制定符合企业发展的智能化战略。</p>
+              <ul class="product-features">
+                <li>战略规划</li>
+                <li>流程优化</li>
+                <li>技术选型</li>
+                <li>实施指导</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="contact.html" class="product-btn">联系我们</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-header">
+              <h2>定制化开发服务</h2>
+            </div>
+            <div class="product-body">
+              <p class="product-description">根据客户需求，提供专业的软件定制开发服务，打造专属的智能化解决方案。</p>
+              <ul class="product-features">
+                <li>需求分析</li>
+                <li>定制开发</li>
+                <li>系统集成</li>
+                <li>运维支持</li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="contact.html" class="product-btn">联系我们</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 上海曼桠姆智能科技有限公司. 保留所有权利.</p>
+      <p>地址：上海市浦东新区张江高科技园区 | 电话：021-12345678</p>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>
+
