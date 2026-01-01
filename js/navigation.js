@@ -6,7 +6,7 @@ function loadNavigation() {
         <div class="nav-logo">
           <a href="index.html">
             <img src="images/logo.png" alt="上海曼桠姆智能科技" class="logo-image">
-            <span class="logo-text">上海曼桠姆智能科技</span>
+            <span class="logo-text">曼桠姆</span>
           </a>
         </div>
         <ul class="nav-menu">
